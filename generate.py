@@ -16,8 +16,8 @@ def main():
         print "Burgundy Bronze Gold   Lime"
         print "Jade     Olive  Teal   Cobalt"
         print "Indigo   Purple Violet Fuchsia"
-        bloodColor = ""
+        bloodColor = “null”
         bloodColors = ["burgundy", "bronze", "gold", "lime", "jade", "olive", "teal", "cobalt", "indigo", "purple", "violet", "fuchsia"]
-        while bloodColor != any(color in x for x in bloodColors):
-            bloodColor = raw_input("Blood Color: ")
+        while bloodColor not in bloodColors: # well duh why was i using any() i can use in
+            bloodColor = raw_input("Blood Color: “).lower()
             
